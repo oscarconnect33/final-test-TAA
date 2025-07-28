@@ -29,8 +29,8 @@ const WhatWeDoSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-auto-dark">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section id="services" className="py-20 md:py-24 bg-auto-dark">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">

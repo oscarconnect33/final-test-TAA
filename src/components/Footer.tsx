@@ -1,4 +1,4 @@
-import { Car } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   const footerLinks = {
@@ -24,15 +24,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo and Tagline */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-                <Car className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-foreground">TOP AUTO</span>
-                <span className="text-lg font-bold text-primary">ADVISORS</span>
-              </div>
-            </div>
+            <Logo size="md" showText={true} className="mb-6" />
             <p className="text-auto-blue font-semibold text-lg mb-4">Buy Smart. Drive Safe.</p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Protecting car buyers from bad deals and financial stress since day one.

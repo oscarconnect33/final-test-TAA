@@ -2,8 +2,8 @@ import { Car, HelpCircle } from "lucide-react";
 
 const WhoWeHelpSection = () => {
   return (
-    <section id="who-we-help" className="py-24 md:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section id="who-we-help" className="py-20 md:py-24 bg-background">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">

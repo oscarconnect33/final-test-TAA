@@ -43,16 +43,16 @@ const TeamSection = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className="group bg-gradient-card border border-auto-border rounded-2xl p-6 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+              className="group bg-gradient-card border border-auto-border rounded-xl p-6 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Avatar */}
-              <div className="relative mb-6">
-                <div className="w-24 h-24 mx-auto bg-gradient-to-r from-auto-blue to-primary rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-glow group-hover:scale-110 transition-transform duration-300">
+              <div className="relative mb-4">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-r from-auto-blue to-primary rounded-full flex items-center justify-center text-white text-lg font-bold shadow-glow group-hover:scale-105 transition-transform duration-300">
                   {member.image}
                 </div>
               </div>

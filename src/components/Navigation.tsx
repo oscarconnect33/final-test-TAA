@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Car, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,15 +34,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-              <Car className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-foreground">TOP AUTO</span>
-              <span className="text-xl font-bold text-primary">ADVISORS</span>
-            </div>
-          </div>
+          <Logo size="md" showText={true} />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

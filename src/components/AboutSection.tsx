@@ -1,4 +1,4 @@
-import { Car } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const AboutSection = () => {
   return (
@@ -57,13 +57,7 @@ const AboutSection = () => {
               {/* Main Logo Circle */}
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-auto-blue to-primary rounded-full flex items-center justify-center shadow-glow animate-float">
                 <div className="w-64 h-64 bg-auto-dark rounded-full flex items-center justify-center">
-                  <div className="text-center">
-                    <Car className="w-16 h-16 text-auto-blue mx-auto mb-4" />
-                    <div className="text-white">
-                      <div className="text-2xl font-bold">TOP AUTO</div>
-                      <div className="text-2xl font-bold text-auto-blue">ADVISORS</div>
-                    </div>
-                  </div>
+                  <Logo size="xl" showText={true} />
                 </div>
               </div>
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Car, CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const HeroSection = () => {
   return (
@@ -16,9 +17,9 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-auto-blue to-transparent opacity-50 animate-road-lines"></div>
         <div className="absolute bottom-4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-auto-blue/30 to-transparent animate-road-lines" style={{ animationDelay: '1s' }}></div>
         
-        {/* Floating car silhouette */}
+        {/* Floating logo silhouette */}
         <div className="absolute top-1/3 right-10 opacity-10">
-          <Car className="w-64 h-64 text-auto-blue animate-float" />
+          <Logo size="xl" showText={false} className="w-64 h-64 animate-float" />
         </div>
         
         {/* Gradient orbs */}
@@ -28,9 +29,9 @@ const HeroSection = () => {
 
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 text-center">
-        <div className="animate-fade-in">
+        <div className="animate-fade-in max-w-6xl mx-auto">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
             Don't Sign That{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-auto-blue to-primary">
               Car Contract
@@ -40,14 +41,13 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed">
             Let a trusted advisor review it first — no pressure, no sales tactics.
           </p>
 
           {/* Supporting Text */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Top Auto Advisors helps first-time car buyers avoid bad loans, inflated fees, and dealership games.
-            We break down your contract before you sign — so you stay protected and in control.
+          <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
+            We'll review your offer and respond within 24 hours. Clear, unbiased advice from real professionals.
           </p>
 
           {/* CTA Button */}
