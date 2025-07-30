@@ -175,7 +175,7 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'car-drive': 'car-drive 8s linear infinite',
 				'road-lines': 'road-lines 2s linear infinite'

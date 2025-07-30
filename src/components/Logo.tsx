@@ -1,5 +1,3 @@
-import { Car } from "lucide-react";
-
 interface LogoProps {
   size?: "sm" | "md" | "lg" | "xl";
   showText?: boolean;
@@ -7,38 +5,41 @@ interface LogoProps {
 }
 
 const Logo = ({ size = "md", showText = true, className = "" }: LogoProps) => {
-  const sizeClasses = {
-    sm: "w-8 h-8",
-    md: "w-10 h-10", 
-    lg: "w-16 h-16",
-    xl: "w-24 h-24"
+  const sizeMap = {
+    sm: "w-20 h-20",  // tightened from 28
+    md: "w-32 h-32",  // tightened from 40
+    lg: "w-44 h-44",  // tightened from 56
+    xl: "w-60 h-60"   // tightened from 72
   };
 
-  const textSizeClasses = {
-    sm: "text-sm",
-    md: "text-lg",
-    lg: "text-xl", 
-    xl: "text-2xl"
+  const textSizeMap = {
+    sm: "text-xl",
+    md: "text-2xl",
+    lg: "text-3xl",
+    xl: "text-4xl"
   };
 
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
-      {/* Logo Circle with Car */}
-      <div className={`${sizeClasses[size]} bg-gradient-primary rounded-full flex items-center justify-center shadow-glow relative`}>
-        {/* Outer glow ring */}
-        <div className={`${sizeClasses[size]} absolute inset-0 rounded-full bg-gradient-to-r from-auto-blue to-primary opacity-50 blur-sm`}></div>
-        {/* Inner logo */}
-        <div className={`${sizeClasses[size]} relative bg-auto-dark rounded-full flex items-center justify-center border-2 border-auto-blue/30`}>
-          <Car className={`${size === 'sm' ? 'w-4 h-4' : size === 'md' ? 'w-5 h-5' : size === 'lg' ? 'w-8 h-8' : 'w-12 h-12'} text-auto-blue`} />
-        </div>
+    <div className={`flex items-center gap-6 ${className}`}>
+      {/* Logo Circle */}
+      <div
+        className={`relative ${sizeMap[size]} rounded-full border-[3px] border-auto-blue/60 bg-auto-dark shadow-[0_0_80px_rgba(2,153,255,0.75)] flex items-center justify-center overflow-hidden`}
+      >
+        <img
+          src="/images/car-logo-transparent.png"
+          alt="Car logo"
+          className="w-full h-full object-cover scale-125 drop-shadow-[0_2px_14px_rgba(255,255,255,0.85)] transition-transform duration-300"
+        />
       </div>
 
-      {/* Text */}
+      {/* One-Line Text */}
       {showText && (
-        <div className="flex flex-col">
-          <span className={`${textSizeClasses[size]} font-bold text-foreground leading-tight`}>TOP AUTO</span>
-          <span className={`${textSizeClasses[size]} font-bold text-primary leading-tight`}>ADVISORS</span>
-        </div>
+        <span
+          className={`font-bold tracking-wide whitespace-nowrap ${textSizeMap[size]}`}
+        >
+          <span className="text-white">TOP AUTO </span>
+          <span className="text-auto-blue">ADVISORS</span>
+        </span>
       )}
     </div>
   );

@@ -3,26 +3,37 @@ const TeamSection = () => {
     {
       name: "Jovan Palomera",
       role: "Founder & Strategy Lead",
-      description: "Jovan started this company after years in auto finance—where he saw too many good people walk into bad contracts.",
-      image: "JP"
+      description:
+        "Jovan started this company after years in auto finance—where he saw too many good people walk into bad contracts.",
+      image: "Jovan.jpeg"
     },
     {
-      name: "Christian De La Rosa", 
+      name: "Christian De La Rosa",
       role: "Director of Operations & Client Advisor",
-      description: "From the first message to the final review, Christian makes sure every client gets clear, timely help.",
-      image: "CR"
+      description:
+        "From the first message to the final review, Christian makes sure every client gets clear, timely help.",
+      image: "Christian.jpeg"
     },
     {
       name: "Maya Navarro",
-      role: "Marketing Manager", 
-      description: "Maya drives the outreach—building awareness, creating content, and connecting with the people who need help most.",
-      image: "MN"
+      role: "Marketing Manager",
+      description:
+        "Maya drives the outreach—building awareness, creating content, and connecting with the people who need help most.",
+      image: "Maya.png"
     },
     {
       name: "Teresa Ramos",
       role: "Partnerships & Business Development",
-      description: "Teresa focuses on building relationships with credit unions, brokers, and trusted businesses.",
-      image: "TR"
+      description:
+        "Teresa focuses on building relationships with credit unions, brokers, and trusted businesses.",
+      image: "Teresa.png"
+    },
+    {
+      name: "Nina",
+      role: "Morale Officer",
+      description:
+        "Nina brings smiles, tail wags, and stress relief to the entire office crew.",
+      image: "Nina.jpeg"
     }
   ];
 
@@ -38,7 +49,9 @@ const TeamSection = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We're a small but serious crew— each of us committed to protecting car buyers from bad deals and financial stress. Real experience. Real heart.
+            We're a small but serious crew— each of us committed to protecting
+            car buyers from bad deals and financial stress. Real experience.
+            Real heart.
           </p>
         </div>
 
@@ -51,11 +64,11 @@ const TeamSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Avatar */}
-              <div className="relative mb-4">
-                <div className="w-20 h-20 mx-auto bg-gradient-to-r from-auto-blue to-primary rounded-full flex items-center justify-center text-white text-lg font-bold shadow-glow group-hover:scale-105 transition-transform duration-300">
-                  {member.image}
-                </div>
-              </div>
+              <img
+  src={`/images/${member.image}`}
+  alt={member.name}
+  className="w-40 h-40 rounded-full object-cover mx-auto shadow-md group-hover:scale-105 transition-transform duration-300 mb-6"
+/>
 
               {/* Member Info */}
               <div className="text-center">
@@ -71,21 +84,6 @@ const TeamSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Team Morale Section */}
-        <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <div className="bg-gradient-card border border-auto-border rounded-2xl p-8 shadow-card inline-block">
-            <div className="flex items-center justify-center space-x-4">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-2xl shadow-glow animate-float">
-                🐶
-              </div>
-              <div className="text-left">
-                <h4 className="text-xl font-bold text-foreground">Nina</h4>
-                <p className="text-auto-blue font-semibold">Morale Officer</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
