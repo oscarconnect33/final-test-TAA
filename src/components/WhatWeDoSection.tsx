@@ -32,7 +32,7 @@ const WhatWeDoSection = () => {
   return (
     <section 
       id="services" 
-      className="relative py-20 md:py-24 bg-gradient-to-b from-slate-900 via-blue-900/40 to-slate-900 overflow-hidden"
+      className="relative py-12 md:py-20 lg:py-24 bg-gradient-to-b from-slate-900 via-blue-900/40 to-slate-900 overflow-hidden"
     >
       {/* Enhanced starry background effect */}
       <div className="absolute inset-0">
@@ -45,25 +45,25 @@ const WhatWeDoSection = () => {
         <div className="absolute top-1/3 left-1/2 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-1000 shadow-[0_0_8px_#93c5fd]"></div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 sm:px-8">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6 drop-shadow-lg">
             What We Do
           </h2>
-          <p className="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed px-4">
             We help first-time car buyers make informed decisions before committing to a loan or dealership offer.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -73,7 +73,7 @@ const WhatWeDoSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 ${service.borderColor} rounded-2xl p-8 hover:scale-105 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:border-opacity-80`}
+                className={`group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 ${service.borderColor} rounded-2xl p-6 md:p-8 hover:scale-105 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:border-opacity-80`}
                 style={{
                   boxShadow: `0 10px 30px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)`
                 }}
@@ -83,14 +83,14 @@ const WhatWeDoSection = () => {
                 
                 <div className="flex flex-col items-center text-center h-full relative z-10">
                   {/* Enhanced Glowing Icon */}
-                  <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-800 border-2 ${service.borderColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 relative overflow-hidden`}
+                  <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-800 border-2 ${service.borderColor} flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-all duration-300 relative overflow-hidden`}
                        style={{
                          boxShadow: `0 0 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)`
                        }}>
                     {/* Icon glow background */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-20 group-hover:opacity-40 transition-opacity duration-300`}></div>
                     <Icon 
-                      className={`w-12 h-12 ${service.iconColor} relative z-10 drop-shadow-lg group-hover:drop-shadow-[0_0_10px_currentColor] transition-all duration-300`} 
+                      className={`w-10 h-10 md:w-12 md:h-12 ${service.iconColor} relative z-10 drop-shadow-lg group-hover:drop-shadow-[0_0_10px_currentColor] transition-all duration-300`} 
                       style={{
                         filter: 'drop-shadow(0 0 8px currentColor)'
                       }}
@@ -98,12 +98,12 @@ const WhatWeDoSection = () => {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gray-100 transition-colors drop-shadow-sm">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-gray-100 transition-colors drop-shadow-sm">
                     {service.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-gray-200 leading-relaxed flex-grow text-base">
+                  <p className="text-sm md:text-base text-gray-200 leading-relaxed flex-grow">
                     {service.description}
                   </p>
                 </div>
