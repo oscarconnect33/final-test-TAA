@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image"; // or use regular <img> if not on Next.js
 
 const HeroSection = () => {
   return (
