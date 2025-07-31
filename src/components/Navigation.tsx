@@ -17,10 +17,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "Services", href: "#services" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/#services" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
