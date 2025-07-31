@@ -18,14 +18,14 @@ const Footer = () => {
       {/* Glowing Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-auto-blue to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:items-start">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 md:items-start">
           {/* Glowing Logo - 3x larger */}
           <div className="md:col-span-1 flex flex-col items-start">
             <img
               src="/images/hero-logo.png"
               alt="Top Auto Advisors Logo"
-              className="w-72 h-auto mb-6 drop-shadow-[0_0_60px_rgba(59,130,246,0.9)]"
+              className="w-48 md:w-64 lg:w-72 h-auto mb-4 md:mb-6 drop-shadow-[0_0_60px_rgba(59,130,246,0.9)]"
             />
           </div>
 

@@ -10,7 +10,7 @@ const LeadMagnetSection = () => {
   ];
 
   return (
-    <section id="lead-magnet" className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section id="lead-magnet" className="py-16 md:py-24 lg:py-32 bg-background relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-auto-blue/10 rounded-full blur-3xl animate-float" />
@@ -21,10 +21,10 @@ const LeadMagnetSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Side Content */}
           <div className="animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-auto-blue to-primary">
                 5 Things to Look Out For
               </span>
@@ -32,12 +32,12 @@ const LeadMagnetSection = () => {
               Before Buying a Car
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
               Buying a car is a big move — but many buyers miss simple red flags that cost them. These tips help you avoid common traps.
             </p>
 
-            <div className="bg-gradient-card border border-auto-border rounded-2xl p-8 shadow-card mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
+            <div className="bg-gradient-card border border-auto-border rounded-2xl p-4 md:p-8 shadow-card mb-6 md:mb-8">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 flex items-center">
                 <span className="w-1 h-8 bg-gradient-to-b from-auto-blue to-primary rounded-full mr-4" />
                 Inside the PDF:
               </h3>

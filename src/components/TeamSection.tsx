@@ -38,17 +38,17 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-24 md:py-32 bg-auto-dark">
+    <section id="team" className="py-16 md:py-24 lg:py-32 bg-auto-dark">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
             Meet the Team Behind{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-auto-blue to-primary">
               Top Auto Advisors
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We're a small but serious crew— each of us committed to protecting
             car buyers from bad deals and financial stress. Real experience.
             Real heart.
@@ -56,29 +56,29 @@ const TeamSection = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className="group bg-gradient-card border border-auto-border rounded-xl p-6 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 animate-fade-in"
+              className="group bg-gradient-card border border-auto-border rounded-xl p-4 md:p-6 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Avatar */}
               <img
   src={`/images/${member.image}`}
   alt={member.name}
-  className="w-40 h-40 rounded-full object-cover mx-auto shadow-md group-hover:scale-105 transition-transform duration-300 mb-6"
+  className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full object-cover mx-auto shadow-md group-hover:scale-105 transition-transform duration-300 mb-4 md:mb-6"
 />
 
               {/* Member Info */}
               <div className="text-center">
-                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-auto-blue font-semibold mb-4">
+                <p className="text-sm md:text-base text-auto-blue font-semibold mb-3 md:mb-4">
                   {member.role}
                 </p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                   {member.description}
                 </p>
               </div>

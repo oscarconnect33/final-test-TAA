@@ -6,26 +6,26 @@ import { Mail, Phone, Clock } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-auto-dark">
+    <section id="contact" className="py-16 md:py-24 lg:py-32 bg-auto-dark">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
             Contact{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-auto-blue to-primary">
               Us
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Fill out the form below and let us know what you need help with. We'll get back to you within 24 hours.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Left Content */}
           <div className="lg:col-span-2 animate-fade-in">
             <div className="space-y-6">
-              <div className="bg-gradient-card border border-auto-border rounded-xl p-6 shadow-card">
+                <div className="bg-gradient-card border border-auto-border rounded-xl p-4 md:p-6 shadow-card">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-auto-blue to-primary rounded-lg flex items-center justify-center shadow-glow">
                     <Mail className="w-6 h-6 text-white" />
@@ -68,7 +68,7 @@ const ContactSection = () => {
             <form
               action="https://formspree.io/f/movlldpz"
               method="POST"
-              className="bg-gradient-card border border-auto-border rounded-2xl p-8 shadow-card"
+              className="bg-gradient-card border border-auto-border rounded-2xl p-4 md:p-8 shadow-card"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="space-y-2">

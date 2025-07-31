@@ -34,7 +34,8 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Logo size="md" showText={true} />
+          <Logo size="sm" showText={true} className="md:hidden" />
+          <Logo size="md" showText={true} className="hidden md:flex" />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

@@ -6,21 +6,21 @@ interface LogoProps {
 
 const Logo = ({ size = "md", showText = true, className = "" }: LogoProps) => {
   const sizeMap = {
-    sm: "w-20 h-20",  // tightened from 28
+    sm: "w-12 h-12",  // mobile friendly
     md: "w-32 h-32",  // tightened from 40
     lg: "w-44 h-44",  // tightened from 56
     xl: "w-60 h-60"   // tightened from 72
   };
 
   const textSizeMap = {
-    sm: "text-xl",
+    sm: "text-sm",
     md: "text-2xl",
     lg: "text-3xl",
     xl: "text-4xl"
   };
 
   return (
-    <div className={`flex items-center gap-6 ${className}`}>
+    <div className={`flex items-center gap-2 md:gap-6 ${className}`}>
       {/* Logo Circle */}
       <div
         className={`relative ${sizeMap[size]} rounded-full border-[3px] border-auto-blue/60 bg-auto-dark shadow-[0_0_80px_rgba(2,153,255,0.75)] flex items-center justify-center overflow-hidden`}

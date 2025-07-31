@@ -20,7 +20,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
-        className="z-10 max-w-2xl w-full py-20 text-left"
+        className="z-10 max-w-2xl w-full py-16 md:py-20 text-left"
       >
         <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-tight mb-6">
           Don’t Sign That{" "}
@@ -49,7 +49,7 @@ const HeroSection = () => {
           </Button>
         </motion.div>
 
-        <div className="mt-10 flex flex-wrap gap-4 text-sm text-muted-foreground">
+        <div className="mt-6 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-auto-blue" />
             <span>24-hour response time</span>
