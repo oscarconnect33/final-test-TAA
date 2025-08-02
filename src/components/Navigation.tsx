@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
@@ -39,13 +40,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button variant="cta" size="sm">
               Contact
@@ -70,14 +71,14 @@ const Navigation = () => {
           <div className="md:hidden bg-auto-card border border-auto-border rounded-xl mt-4 p-6 animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <Button variant="cta" size="sm" className="mt-4">
                 Contact

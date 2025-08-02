@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const footerLinks = {
     Pages: [
-      { name: "Home", href: "#hero" },
-      { name: "Services", href: "#services" },
-      { name: "About Us", href: "#about" },
-      { name: "Contact", href: "#contact" }
+      { name: "Home", href: "/" },
+      { name: "Services", href: "/services" },
+      { name: "About Us", href: "/about" },
+      { name: "Contact", href: "/#contact" }
     ],
     Help: [
       { name: "FAQs", href: "#" },
-      { name: "How the Process Works", href: "#how-it-works" },
-      { name: "What We Do", href: "#services" }
+      { name: "How the Process Works", href: "/#how-it-works" },
+      { name: "What We Do", href: "/services" }
     ]
   };
 
@@ -35,12 +37,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.Pages.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -52,12 +54,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.Help.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

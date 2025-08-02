@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { FileText, AlertTriangle, User, DollarSign } from "lucide-react";
 
 const ServicesHeroSection = () => {
+  console.log("ServicesHeroSection is loading and rendering");
+  
   const services = [
     {
       icon: FileText,
