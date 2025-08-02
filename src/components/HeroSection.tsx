@@ -11,10 +11,15 @@ const HeroSection = () => {
       className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 bg-gray-950 text-white overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(10,10,10,0.85), rgba(10,10,10,0.2)), url('/images/road-bg.jpg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
+      {/* DEBUG MARKER - HOME HERO START */}
+      <p className="absolute top-2 left-2 text-xs text-lime-400 bg-black/70 px-2 py-1 rounded z-50">
+        DEBUG: Home HeroSection Loaded
+      </p>
+
       {/* Left Content */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
@@ -25,7 +30,7 @@ const HeroSection = () => {
         <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-tight mb-6">
           Don’t Sign That{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-auto-blue to-primary">
-            Car Contract
+            Auto Loan Contract
           </span>{" "}
           Just Yet.
         </h1>
@@ -35,7 +40,8 @@ const HeroSection = () => {
         </p>
 
         <p className="text-lg text-muted-foreground mb-8 max-w-md">
-          We'll review your offer and respond within 24 hours. Clear, unbiased advice from real professionals.
+          We'll review your offer and respond within 24 hours. Clear, unbiased
+          advice from real professionals.
         </p>
 
         <motion.div

@@ -8,30 +8,35 @@ const ServicesHeroSection = () => {
       icon: FileText,
       title: "Contract Reviews",
       delay: 0.2,
-      position: "top-20 right-32"
+      position: "top-20 right-32",
     },
     {
       icon: AlertTriangle,
       title: "Red Flag Reports",
       delay: 0.4,
-      position: "top-64 right-16"
+      position: "top-64 right-16",
     },
     {
       icon: User,
       title: "Consultation Calls",
       delay: 0.6,
-      position: "bottom-32 right-20"
+      position: "bottom-32 right-20",
     },
     {
       icon: DollarSign,
       title: "Negotiation Tips",
       delay: 0.8,
-      position: "bottom-16 right-44"
-    }
+      position: "bottom-16 right-44",
+    },
   ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-between px-6 md:px-16 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white overflow-hidden">
+      {/* DEBUG MARKER - SERVICES HERO START */}
+      <p className="absolute top-2 left-2 text-xs text-orange-400 bg-black/70 px-2 py-1 rounded z-50">
+        DEBUG: Services HeroSection Loaded
+      </p>
+
       {/* Animated background particles */}
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
@@ -71,7 +76,8 @@ const ServicesHeroSection = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-lg">
-          Our experts review your loan terms, flag issues in your contract, provide negotiation guidance, and more.
+          Our experts review your loan terms, flag issues in your contract,
+          provide negotiation guidance, and more.
         </p>
 
         <motion.div
@@ -80,15 +86,15 @@ const ServicesHeroSection = () => {
           transition={{ delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <Button 
-            variant="cta" 
+          <Button
+            variant="cta"
             size="lg"
             className="px-8 py-4 text-lg font-semibold rounded-xl hover:scale-105 transition-transform"
           >
             View All Services
           </Button>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             className="px-8 py-4 text-lg font-semibold rounded-xl border-white/20 text-white hover:bg-white/10 hover:scale-105 transition-all"
           >
@@ -102,7 +108,13 @@ const ServicesHeroSection = () => {
         {/* Connection lines */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 600">
           <defs>
-            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="lineGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="rgba(2,153,255,0.3)" />
               <stop offset="100%" stopColor="rgba(2,153,255,0.1)" />
             </linearGradient>
@@ -118,7 +130,7 @@ const ServicesHeroSection = () => {
           />
         </svg>
 
-        {services.map((service, index) => {
+        {services.map((service) => {
           const Icon = service.icon;
           return (
             <motion.div
@@ -129,15 +141,11 @@ const ServicesHeroSection = () => {
               className={`absolute ${service.position} flex flex-col items-center text-center group cursor-pointer`}
             >
               <div className="relative">
-                {/* Outer glow */}
                 <div className="absolute inset-0 rounded-xl bg-auto-blue/20 blur-xl scale-150 group-hover:scale-175 transition-transform duration-300" />
-                
-                {/* Icon container */}
                 <div className="relative bg-auto-dark/80 border border-auto-blue/40 rounded-xl p-6 backdrop-blur-sm group-hover:border-auto-blue/60 transition-all duration-300 shadow-[0_0_30px_rgba(2,153,255,0.3)]">
                   <Icon className="w-8 h-8 text-auto-blue group-hover:text-white transition-colors duration-300" />
                 </div>
               </div>
-              
               <h3 className="mt-4 text-lg font-semibold text-white whitespace-nowrap group-hover:text-auto-blue transition-colors duration-300">
                 {service.title}
               </h3>
