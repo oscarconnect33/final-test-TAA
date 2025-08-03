@@ -1,73 +1,73 @@
+/* ==========================================================================
+   TAILWIND CSS IMPORTS
+   ========================================================================== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ==========================================================================
-   AUTOMOTIVE THEME DESIGN SYSTEM
+   AUTOMOTIVE DESIGN SYSTEM
+   Production-ready CSS architecture for automotive advisory platform
    ========================================================================== */
 
-/* 
-  Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-  All colors MUST be HSL.
-*/
-
 @layer base {
+  /* ==========================================================================
+     CSS VARIABLE DEFINITIONS - DESIGN TOKENS
+     All colors use HSL format for better accessibility and theming support
+     ========================================================================== */
+  
   :root {
-    /* ==========================================================================
-       CORE UI THEME COLORS
-       ========================================================================== */
-    
     /* Base Layout Colors */
     --background: 240 6% 4%;
     --foreground: 210 40% 98%;
-
-    /* Component Colors */
+    
+    /* Component System Colors */
     --card: 240 5% 8%;
     --card-foreground: 210 40% 98%;
     --popover: 240 5% 8%;
     --popover-foreground: 210 40% 98%;
-
-    /* Brand Colors */
+    
+    /* Brand & Interaction Colors */
     --primary: 217 91% 60%;
     --primary-foreground: 240 6% 4%;
     --secondary: 240 4% 15%;
     --secondary-foreground: 210 40% 98%;
-
-    /* Content Colors */
-    --muted: 240 4% 15%;
-    --muted-foreground: 215 20% 65%;
     --accent: 217 91% 60%;
     --accent-foreground: 240 6% 4%;
-
-    /* State Colors */
+    
+    /* Content & Typography */
+    --muted: 240 4% 15%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* States & Feedback */
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
+    
     /* Form Elements */
     --border: 240 4% 15%;
     --input: 240 4% 15%;
     --ring: 217 91% 60%;
-
-    /* Border Radius */
     --radius: 0.75rem;
-
+    
     /* ==========================================================================
-       CUSTOM AUTOMOTIVE THEME COLORS
+       AUTOMOTIVE THEME EXTENSIONS
+       Custom color palette for automotive advisory brand
        ========================================================================== */
     
-    /* Custom Blue Palette */
+    /* Blue Accent System */
     --auto-blue: 217 91% 60%;
     --auto-blue-dark: 217 91% 45%;
     --auto-glow: 217 91% 60%;
-
-    /* Custom Dark Palette */
+    
+    /* Dark Theme Palette */
     --auto-dark: 240 6% 4%;
     --auto-darker: 240 8% 2%;
     --auto-card: 240 5% 8%;
     --auto-border: 240 4% 15%;
-
+    
     /* ==========================================================================
-       GRADIENTS & VISUAL EFFECTS
+       VISUAL EFFECTS SYSTEM
+       Gradients, shadows, and effects for enhanced UI
        ========================================================================== */
     
     /* Background Gradients */
@@ -75,21 +75,22 @@
     --gradient-card: linear-gradient(145deg, hsl(240 5% 8%) 0%, hsl(240 4% 12%) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 45%) 100%);
     
-    /* Shadow & Glow Effects */
+    /* Shadow System */
     --shadow-glow: 0 0 40px hsl(var(--auto-glow) / 0.3);
     --shadow-card: 0 10px 30px -5px hsl(240 6% 2% / 0.8);
     --shadow-elegant: 0 20px 60px -10px hsl(240 6% 2% / 0.6);
-
+    
     /* ==========================================================================
-       ANIMATION & TRANSITIONS
+       MOTION & ANIMATION SYSTEM
+       Transition timing functions for consistent motion design
        ========================================================================== */
     
-    /* Transition Functions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
+    
     /* ==========================================================================
-       SIDEBAR COMPONENT COLORS
+       SIDEBAR COMPONENT TOKENS
+       Dedicated tokens for sidebar navigation component
        ========================================================================== */
     
     --sidebar-background: 240 5% 8%;
@@ -103,40 +104,33 @@
   }
 
   /* ==========================================================================
-     DARK MODE THEME OVERRIDES
+     DARK MODE OVERRIDES
+     Theme-specific adjustments for dark mode (currently same as default)
      ========================================================================== */
   
   .dark {
-    /* Core UI Colors */
+    /* Inherit most values from root - this ensures consistency */
     --background: 240 6% 4%;
     --foreground: 210 40% 98%;
     --card: 240 5% 8%;
     --card-foreground: 210 40% 98%;
     --popover: 240 5% 8%;
     --popover-foreground: 210 40% 98%;
-    
-    /* Brand Colors */
     --primary: 217 91% 60%;
     --primary-foreground: 240 6% 4%;
     --secondary: 240 4% 15%;
     --secondary-foreground: 210 40% 98%;
-    
-    /* Content Colors */
     --muted: 240 4% 15%;
     --muted-foreground: 215 20% 65%;
     --accent: 217 91% 60%;
     --accent-foreground: 240 6% 4%;
-    
-    /* State Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-    
-    /* Form Elements */
     --border: 240 4% 15%;
     --input: 240 4% 15%;
     --ring: 217 91% 60%;
     
-    /* Sidebar Colors */
+    /* Sidebar colors for dark mode */
     --sidebar-background: 240 5% 8%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 217 91% 60%;
@@ -149,15 +143,117 @@
 }
 
 /* ==========================================================================
-   BASE STYLE RESETS & DEFAULTS
+   BASE LAYER - GLOBAL RESETS & DEFAULTS
+   Foundation styles that apply to all elements
    ========================================================================== */
 
 @layer base {
+  /* Universal border color inheritance */
   * {
     @apply border-border;
   }
 
+  /* Body baseline styles */
   body {
     @apply bg-background text-foreground;
+    /* Ensure smooth font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ==========================================================================
+   COMPONENT LAYER - REUSABLE UI PATTERNS
+   Custom components and utility classes for common patterns
+   ========================================================================== */
+
+@layer components {
+  /* Button Variants - Production-ready button system */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground shadow-md hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-ring transition-colors;
+  }
+  
+  .btn-glow {
+    @apply bg-auto-blue text-auto-dark shadow-glow hover:shadow-elegant transition-all duration-300;
+  }
+  
+  /* Card System - Consistent card layouts */
+  .card-base {
+    @apply bg-card text-card-foreground border border-border rounded-lg shadow-card;
+  }
+  
+  .card-automotive {
+    @apply bg-auto-card border-auto-border shadow-elegant backdrop-blur-sm;
+  }
+  
+  /* Animation Classes - Standardized motion */
+  .animate-entrance {
+    @apply animate-fade-in;
+  }
+  
+  .animate-float-gentle {
+    @apply animate-float;
+  }
+  
+  .animate-glow-effect {
+    @apply animate-glow-pulse;
+  }
+}
+
+/* ==========================================================================
+   UTILITIES LAYER - CUSTOM UTILITY EXTENSIONS
+   Project-specific utility classes that extend Tailwind
+   ========================================================================== */
+
+@layer utilities {
+  /* Text Effects */
+  .text-gradient-primary {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-auto-blue to-primary;
+  }
+  
+  .text-gradient-automotive {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-auto-blue via-primary to-auto-blue;
+  }
+  
+  /* Background Utilities */
+  .bg-gradient-hero-automotive {
+    background-image: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card-automotive {
+    background-image: var(--gradient-card);
+  }
+  
+  /* Shadow Utilities */
+  .shadow-automotive-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-automotive-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-automotive-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  /* Transition Utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Layout Utilities for Services Hero */
+  .services-hero-layout {
+    @apply relative min-h-screen flex items-center justify-between px-6 md:px-16 overflow-hidden;
+  }
+  
+  .services-floating-card {
+    @apply relative bg-auto-dark/80 border border-auto-blue/40 rounded-xl p-6 backdrop-blur-sm;
+    @apply group-hover:border-auto-blue/60 transition-all duration-300;
+    box-shadow: 0 0 30px rgba(2, 153, 255, 0.3);
   }
 }
