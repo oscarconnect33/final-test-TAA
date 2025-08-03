@@ -1,18 +1,12 @@
-/* ==========================================================================
-   BASE RESET & TAILWIND IMPORTS
-   ========================================================================== */
+/* Tailwind Base Setup */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ==========================================================================
-   FONTS
-   ========================================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-/* ==========================================================================
-   ROOT VARIABLES - DESIGN SYSTEM
-   ========================================================================== */
+/* Global Tokens */
 :root {
   /* Core Layout Colors */
   --background: 240 6% 4%;
@@ -68,21 +62,9 @@
 
   /* Radius */
   --radius: 0.75rem;
-
-  /* Sidebar Component Colors */
-  --sidebar-background: 240 5% 8%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 240 6% 4%;
-  --sidebar-accent: 240 4% 15%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 240 4% 15%;
-  --sidebar-ring: 217 91% 60%;
 }
 
-/* ==========================================================================
-   DARK MODE OVERRIDES
-   ========================================================================== */
+/* Dark Mode Overrides */
 .dark {
   --background: 240 6% 4%;
   --foreground: 210 40% 98%;
@@ -103,19 +85,15 @@
   --border: 240 4% 15%;
   --input: 240 4% 15%;
   --ring: 217 91% 60%;
-  --sidebar-background: 240 5% 8%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 240 6% 4%;
-  --sidebar-accent: 240 4% 15%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 240 4% 15%;
-  --sidebar-ring: 217 91% 60%;
 }
 
-/* ==========================================================================
-   BUTTON STYLES
-   ========================================================================== */
+/* Hero Section */
+.hero-section {
+  @apply min-h-screen flex items-center justify-center text-foreground;
+  background: var(--gradient-hero);
+}
+
+/* Buttons */
 .btn-primary {
   @apply bg-primary text-primary-foreground rounded-xl py-3 px-6 hover:bg-auto-blue-dark transition-all duration-300;
 }
@@ -124,17 +102,7 @@
   @apply bg-secondary text-secondary-foreground border border-auto-border rounded-xl py-3 px-6 hover:bg-auto-card transition-all duration-300;
 }
 
-/* ==========================================================================
-   HERO SECTION
-   ========================================================================== */
-.hero-section {
-  @apply min-h-screen flex items-center justify-center text-foreground;
-  background: var(--gradient-hero);
-}
-
-/* ==========================================================================
-   UTILITY CLASSES
-   ========================================================================== */
+/* Utility Classes */
 .shadow-elegant {
   box-shadow: var(--shadow-elegant);
 }
@@ -155,9 +123,7 @@
   transition: var(--transition-bounce);
 }
 
-/* ==========================================================================
-   BASE STYLE RESETS
-   ========================================================================== */
+/* Base Style Resets */
 @layer base {
   * {
     @apply border-border;
@@ -169,9 +135,7 @@
   }
 }
 
-/* ==========================================================================
-   COMPONENT OVERRIDES
-   ========================================================================== */
+/* Component Overrides */
 @layer components {
   .gradient-text {
     @apply bg-gradient-to-r from-auto-blue to-accent bg-clip-text text-transparent;
