@@ -1,157 +1,163 @@
+/* ==========================================================================
+   BASE RESET & TAILWIND IMPORTS
+   ========================================================================== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ==========================================================================
-   AUTOMOTIVE THEME DESIGN SYSTEM
+   FONTS
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* 
-  Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-  All colors MUST be HSL.
-*/
+/* ==========================================================================
+   ROOT VARIABLES - DESIGN SYSTEM
+   ========================================================================== */
+:root {
+  /* Core Layout Colors */
+  --background: 240 6% 4%;
+  --foreground: 210 40% 98%;
+  --card: 240 5% 8%;
+  --card-foreground: 210 40% 98%;
+  --popover: 240 5% 8%;
+  --popover-foreground: 210 40% 98%;
 
-@layer base {
-  :root {
-    /* ==========================================================================
-       CORE UI THEME COLORS
-       ========================================================================== */
-    
-    /* Base Layout Colors */
-    --background: 240 6% 4%;
-    --foreground: 210 40% 98%;
+  /* Brand Colors */
+  --primary: 217 91% 60%;
+  --primary-foreground: 240 6% 4%;
+  --secondary: 240 4% 15%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 240 6% 4%;
 
-    /* Component Colors */
-    --card: 240 5% 8%;
-    --card-foreground: 210 40% 98%;
-    --popover: 240 5% 8%;
-    --popover-foreground: 210 40% 98%;
+  /* Content Colors */
+  --muted: 240 4% 15%;
+  --muted-foreground: 215 20% 65%;
 
-    /* Brand Colors */
-    --primary: 217 91% 60%;
-    --primary-foreground: 240 6% 4%;
-    --secondary: 240 4% 15%;
-    --secondary-foreground: 210 40% 98%;
+  /* State Colors */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
 
-    /* Content Colors */
-    --muted: 240 4% 15%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 240 6% 4%;
+  /* Form Elements */
+  --border: 240 4% 15%;
+  --input: 240 4% 15%;
+  --ring: 217 91% 60%;
 
-    /* State Colors */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+  /* Automotive Theme Colors */
+  --auto-blue: 217 91% 60%;
+  --auto-blue-dark: 217 91% 45%;
+  --auto-glow: 217 91% 60%;
+  --auto-dark: 240 6% 4%;
+  --auto-darker: 240 8% 2%;
+  --auto-card: 240 5% 8%;
+  --auto-border: 240 4% 15%;
 
-    /* Form Elements */
-    --border: 240 4% 15%;
-    --input: 240 4% 15%;
-    --ring: 217 91% 60%;
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, hsl(240 8% 2%) 0%, hsl(240 6% 4%) 50%, hsl(217 91% 8%) 100%);
+  --gradient-card: linear-gradient(145deg, hsl(240 5% 8%) 0%, hsl(240 4% 12%) 100%);
+  --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 45%) 100%);
 
-    /* Border Radius */
-    --radius: 0.75rem;
+  /* Shadow Effects */
+  --shadow-glow: 0 0 40px hsl(var(--auto-glow) / 0.3);
+  --shadow-card: 0 10px 30px -5px hsl(240 6% 2% / 0.8);
+  --shadow-elegant: 0 20px 60px -10px hsl(240 6% 2% / 0.6);
 
-    /* ==========================================================================
-       CUSTOM AUTOMOTIVE THEME COLORS
-       ========================================================================== */
-    
-    /* Custom Blue Palette */
-    --auto-blue: 217 91% 60%;
-    --auto-blue-dark: 217 91% 45%;
-    --auto-glow: 217 91% 60%;
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Custom Dark Palette */
-    --auto-dark: 240 6% 4%;
-    --auto-darker: 240 8% 2%;
-    --auto-card: 240 5% 8%;
-    --auto-border: 240 4% 15%;
+  /* Radius */
+  --radius: 0.75rem;
 
-    /* ==========================================================================
-       GRADIENTS & VISUAL EFFECTS
-       ========================================================================== */
-    
-    /* Background Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(240 8% 2%) 0%, hsl(240 6% 4%) 50%, hsl(217 91% 8%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(240 5% 8%) 0%, hsl(240 4% 12%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 45%) 100%);
-    
-    /* Shadow & Glow Effects */
-    --shadow-glow: 0 0 40px hsl(var(--auto-glow) / 0.3);
-    --shadow-card: 0 10px 30px -5px hsl(240 6% 2% / 0.8);
-    --shadow-elegant: 0 20px 60px -10px hsl(240 6% 2% / 0.6);
-
-    /* ==========================================================================
-       ANIMATION & TRANSITIONS
-       ========================================================================== */
-    
-    /* Transition Functions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    /* ==========================================================================
-       SIDEBAR COMPONENT COLORS
-       ========================================================================== */
-    
-    --sidebar-background: 240 5% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 240 6% 4%;
-    --sidebar-accent: 240 4% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 240 4% 15%;
-    --sidebar-ring: 217 91% 60%;
-  }
-
-  /* ==========================================================================
-     DARK MODE THEME OVERRIDES
-     ========================================================================== */
-  
-  .dark {
-    /* Core UI Colors */
-    --background: 240 6% 4%;
-    --foreground: 210 40% 98%;
-    --card: 240 5% 8%;
-    --card-foreground: 210 40% 98%;
-    --popover: 240 5% 8%;
-    --popover-foreground: 210 40% 98%;
-    
-    /* Brand Colors */
-    --primary: 217 91% 60%;
-    --primary-foreground: 240 6% 4%;
-    --secondary: 240 4% 15%;
-    --secondary-foreground: 210 40% 98%;
-    
-    /* Content Colors */
-    --muted: 240 4% 15%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 240 6% 4%;
-    
-    /* State Colors */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    
-    /* Form Elements */
-    --border: 240 4% 15%;
-    --input: 240 4% 15%;
-    --ring: 217 91% 60%;
-    
-    /* Sidebar Colors */
-    --sidebar-background: 240 5% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 240 6% 4%;
-    --sidebar-accent: 240 4% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 240 4% 15%;
-    --sidebar-ring: 217 91% 60%;
-  }
+  /* Sidebar Component Colors */
+  --sidebar-background: 240 5% 8%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 240 6% 4%;
+  --sidebar-accent: 240 4% 15%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 240 4% 15%;
+  --sidebar-ring: 217 91% 60%;
 }
 
 /* ==========================================================================
-   BASE STYLE RESETS & DEFAULTS
+   DARK MODE OVERRIDES
    ========================================================================== */
+.dark {
+  --background: 240 6% 4%;
+  --foreground: 210 40% 98%;
+  --card: 240 5% 8%;
+  --card-foreground: 210 40% 98%;
+  --popover: 240 5% 8%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 240 6% 4%;
+  --secondary: 240 4% 15%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 240 4% 15%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 240 6% 4%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 240 4% 15%;
+  --input: 240 4% 15%;
+  --ring: 217 91% 60%;
+  --sidebar-background: 240 5% 8%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 240 6% 4%;
+  --sidebar-accent: 240 4% 15%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 240 4% 15%;
+  --sidebar-ring: 217 91% 60%;
+}
 
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+.btn-primary {
+  @apply bg-primary text-primary-foreground rounded-xl py-3 px-6 hover:bg-auto-blue-dark transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground border border-auto-border rounded-xl py-3 px-6 hover:bg-auto-card transition-all duration-300;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+  @apply min-h-screen flex items-center justify-center text-foreground;
+  background: var(--gradient-hero);
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+.shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+.transition-bounce {
+  transition: var(--transition-bounce);
+}
+
+/* ==========================================================================
+   BASE STYLE RESETS
+   ========================================================================== */
 @layer base {
   * {
     @apply border-border;
@@ -159,5 +165,15 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* ==========================================================================
+   COMPONENT OVERRIDES
+   ========================================================================== */
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-auto-blue to-accent bg-clip-text text-transparent;
   }
 }
